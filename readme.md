@@ -1,2 +1,2 @@
-# Tech Magic html/css home task
-[Solution](https://yurakichalo.github.io/TechM-html-css-/)
+# TechMagic html/css home task
+Solution is [here](https://yurakichalo.github.io/TechM-html-css-/)
