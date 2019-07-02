@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+span {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* HEADER */
+
+
+.header {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 60px 2fr;
+    grid-template-areas: "logo header-content";
+    grid-column-gap: 15px;
+    padding: 20px 15px 0;
+    margin-bottom: 15px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.logo {
+    background: lightcoral;
+    grid-area: logo;
+}
+
+.header-content {
+    background: lightblue;
+    grid-area: header-content;
+}
+
+
+/* IMG SECTION */
+
+
+.img-section {
+    max-width: 1440px;
+    display: flex;
+    background: lightblue;
+    padding: 30px 20px 15px;
+    margin: 0 15px;
+}
+
+.img-group {
+    width: 48%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.emoji {
+    height: 26vh;
+    width: 26vh;
+}
+
+
+/* THIRD */
+
+
+.third-section {
+    max-width: 1440px;
+    padding: 15px 15px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 15px;
+    grid-template-areas: "one two";
+}
+
+.three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background: lightcoral;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+
+/* MAIN CONTETNT */
+
+
+.main-content {
+    max-width: 1440px;
+    padding: 15px 15px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 15px;
+    grid-template-areas: "fourth-one nav"
+                         "wrapper ."
+                         "fifth ."
+}
+
+/* FOURTH */
+
+
+.fourth-one, .fourth-two, .fourth-three, .fifth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourth-one {
+    height: 240px;
+    grid-area: fourth-one;
+    background: lightblue;
+
+}
+
+.fourth-wrapper {
+    grid-area: wrapper;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "fourth-two fourth-three";
+}
+
+.fourth-two {
+    background: lightblue;
+    height: 200px;
+    grid-area: fourth-two;
+}
+
+.fourth-three {
+    background: lightblue;
+    height: 200px;
+    grid-area: fourth-three;
+}
+
+/* FIFTH */
+
+.fifth {
+    height: 350px;
+    background: lightcoral;
+    grid-area: fifth;
+}
+
+/* NAV */
+
+.navigation {
+    height: 170px;
+    grid-area: nav;
+}
+
+.navigation > ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    text-align: right;
+    padding: 5px 15px 5px 0;
+}
+
+
+.navigation li {
+    width: 80%;
+    border-bottom: 1px solid lightcoral;
+    padding: 3px 2px;
+}
+
+.navigation li > a {
+    color: lightcoral;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 26px;
+}
+
+.navigation a:hover {
+    transform: scale(1.1, 1.1);
+    background: lightcoral;
+    color: white;
+    transition: 0.5s ease;
+    border-radius: 5px;
+    border: none;
+    padding-right: 5px;
+}
+
+
+/* FOOTER */
+
+
+.footer {
+    max-width: 1440px;
+    padding: 15px 15px 0;
+    height: 65px;
+}
+
+.footer-section {
+    background: lightblue;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+
+    /* IMG SECTION */
+
+    .img-group {
+        flex-direction: column;
+    }
+
+    /* MAIN */
+
+    .fourth-wrapper {
+        grid-row-gap: 15px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "fourth-two"
+                             "fourth-three";
+    }
+
+    .fourth-one, .fourth-two, .fourth-three {
+        height: 170px;
+    }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+
+    /* HEADER */
+
+    .header {
+        grid-template-columns: 120px 1fr;
+    }
+
+    /* IMG SECTION */
+
+    .img-section {
+        flex-direction: column;
+    }
+
+    .img-group {
+        width: 100%;
+    }
+
+    /* THIRD */
+
+    .third-section {
+        grid-template: repeat(2, 1fr) / 1fr;
+        grid-row-gap: 10px;
+        grid-template-areas: "one"
+                             "two";
+    }
+
+    /* MAIN */
+
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        grid-template-areas: "fourth-one"
+                             "wrapper"
+                             "fifth"
+                             "nav";
+    }
+
+    /* NAV */
+
+    .navigation > ul {
+        align-items: center;
+        text-align: center;
+    }
+}
